@@ -18,6 +18,9 @@ public:
         LPAREN,  // (
         RPAREN,  // )
         NUM,     // Número
+        SIN,     // sin
+        COS,     // cos
+        LOG,     // log
         ERR,     // Error
         END      // Fin de entrada
     };

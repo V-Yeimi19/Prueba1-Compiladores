@@ -26,6 +26,7 @@ bool is_white_space(char c) {
 
 
 
+/*
 Token* Scanner::nextToken() {
     Token* token;
 
@@ -68,20 +69,19 @@ Token* Scanner::nextToken() {
 
     return token;
 }
-
-/* 
+*/
 
 Token* Scanner::nextToken() {
     Token* token;
     char c;
     state = 0;
-    first = current;;
+    first = current;
 
     while (1) {
         switch (state) {
             case 0: 
                 c = nextChar();
-                if (c == ' ') { first = current;; state = 0; }
+                if (c == ' ') { first = current; state = 0; }
                 else if (c == '\0') return new Token(Token::END);
                 else if (c == '(') state = 1;
                 else if (c == ')') state = 2;
@@ -91,11 +91,12 @@ Token* Scanner::nextToken() {
                 else if (c == '/') state = 6;
                 else if (c == '^') state = 7;
                 else if (isdigit(c)) state = 8;
+                else if (isalpha(c)) state = 30;
                 else return new Token(Token::ERR, c);
                 break;
 
-            case 1: return new Token(Token::LPAREN);
-            case 2: return new Token(Token::RPAREN);
+            case 1: return new Token(Token::LPAREN, c);
+            case 2: return new Token(Token::RPAREN, c);
             case 3: return new Token(Token::PLUS, c);
             case 4: return new Token(Token::MINUS, c);
             case 5: return new Token(Token::MUL, c);
@@ -111,11 +112,24 @@ Token* Scanner::nextToken() {
             case 9: 
                 rollBack();
                 return new Token(Token::NUM, input, first, current - first);
+
+            case 30:
+                c = nextChar();
+                if (isalpha(c)) state = 30;
+                else state = 31;
+                break;
+
+            case 31: {
+                rollBack();
+                string text = input.substr(first, current - first);
+                if (text == "SIN" || text == "sin") return new Token(Token::SIN, input, first, current - first);
+                else if (text == "COS" || text == "cos") return new Token(Token::COS, input, first, current - first);
+                else if (text == "LOG" || text == "log") return new Token(Token::LOG, input, first, current - first);
+                else return new Token(Token::ERR, input, first, current - first);
+            }
         }
     }
 }
-
-*/
 
 void Scanner::rollBack() {
     if (input[current] != '\0')

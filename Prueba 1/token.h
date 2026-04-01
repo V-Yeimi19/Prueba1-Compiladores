@@ -29,6 +29,8 @@ public:
         SIN,    // sin
         COS,    // cos
         LOG,    // log
+        TRUE,   // True
+        FALSE,  // False
         END     // Fin de entradaso
     };
 

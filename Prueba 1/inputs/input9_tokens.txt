@@ -12,9 +12,7 @@ TOKEN(COS, "COS")
 TOKEN(LPAREN, "")
 TOKEN(NUM, "15")
 TOKEN(RPAREN, "")
-TOKEN(ERR, "
-")
-Caracter invalido
+TOKEN(END)
 
-Scanner no exitoso
+Scanner exitoso
 

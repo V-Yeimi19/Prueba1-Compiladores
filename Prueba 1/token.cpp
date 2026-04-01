@@ -72,6 +72,11 @@ ostream &operator<<(ostream &outs, const Token &tok)
     case Token::LOG:
         outs << "TOKEN(LOG, \"" << tok.text << "\")";
         break;
+    case Token::TRUE:
+        outs << "TOKEN(TRUE)";
+        break;
+    case Token::FALSE:
+        outs << "TOKEN(FALSE)";
     case Token::END:
         outs << "TOKEN(END)";
         break;

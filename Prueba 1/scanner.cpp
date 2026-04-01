@@ -40,7 +40,7 @@ Token *Scanner::nextToken()
         {
         case 0:
             c = nextChar();
-            if (c == ' ')
+            if (is_white_space(c))
             {
                 first = current;
                 state = 0;
@@ -159,12 +159,23 @@ Token *Scanner::nextToken()
         {
             rollBack();
             string text = input.substr(first, current - first);
+
+            while (!text.empty() && !isalpha(text.back()))
+            {
+                text.pop_back();
+                current--;
+            }
+
             if (text == "SIN" || text == "sin")
                 return new Token(Token::SIN, input, first, current - first);
             else if (text == "COS" || text == "cos")
                 return new Token(Token::COS, input, first, current - first);
             else if (text == "LOG" || text == "log")
                 return new Token(Token::LOG, input, first, current - first);
+            else if (text == "TRUE" || text == "true" || text == "True")
+                return new Token(Token::TRUE, input, first, current - first);
+            else if (text == "FALSE" || text == "false" || text == "False")
+                return new Token(Token::FALSE, input, first, current - first);
             else
                 return new Token(Token::ERR, input, first, current - first);
         }

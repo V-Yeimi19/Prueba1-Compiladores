@@ -9,9 +9,7 @@ TOKEN(LOG, "LOG")
 TOKEN(LPAREN, "")
 TOKEN(NUM, "100")
 TOKEN(RPAREN, "")
-TOKEN(ERR, "
-")
-Caracter invalido
+TOKEN(END)
 
-Scanner no exitoso
+Scanner exitoso
 

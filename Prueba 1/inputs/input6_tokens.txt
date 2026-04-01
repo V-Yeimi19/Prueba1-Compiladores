@@ -1,7 +1,9 @@
 Iniciando Scanner para archivo: inputs/input6.txt
 
-TOKEN(ERR, "True")
-Caracter invalido
+TOKEN(TRUE)
+TOKEN(PLUS, "+")
+TOKEN(TRUE)
+TOKEN(END)
 
-Scanner no exitoso
+Scanner exitoso
 

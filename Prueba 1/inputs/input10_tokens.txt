@@ -1,9 +1,9 @@
 Iniciando Scanner para archivo: inputs/input10.txt
 
 TOKEN(SIN, "SIN")
-TOKEN(LPAREN, "")
+TOKEN(LPAREN, "(")
 TOKEN(NUM, "90")
-TOKEN(RPAREN, "")
+TOKEN(RPAREN, ")")
 TOKEN(MAYOR, ">")
 TOKEN(BIN, "0b1")
 TOKEN(END)

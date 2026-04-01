@@ -1,17 +1,17 @@
 Iniciando Scanner para archivo: inputs/input9.txt
 
-TOKEN(LPAREN, "")
+TOKEN(LPAREN, "(")
 TOKEN(NUM, "2")
 TOKEN(PLUS, "+")
 TOKEN(NUM, "2")
-TOKEN(RPAREN, "")
+TOKEN(RPAREN, ")")
 TOKEN(MINOR, "<")
 TOKEN(NUM, "5")
 TOKEN(PLUS, "+")
 TOKEN(COS, "COS")
-TOKEN(LPAREN, "")
+TOKEN(LPAREN, "(")
 TOKEN(NUM, "15")
-TOKEN(RPAREN, "")
+TOKEN(RPAREN, ")")
 TOKEN(END)
 
 Scanner exitoso

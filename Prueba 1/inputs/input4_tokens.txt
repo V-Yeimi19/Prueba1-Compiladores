@@ -1,0 +1,12 @@
+Iniciando Scanner para archivo: inputs/input4.txt
+
+TOKEN(MINOR, "1")
+TOKEN(NUM, "1")
+TOKEN(PLUS, "+")
+TOKEN(MINOR, "0")
+TOKEN(NUM, "1
+")
+TOKEN(END)
+
+Scanner exitoso
+

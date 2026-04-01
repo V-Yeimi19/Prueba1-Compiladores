@@ -1,0 +1,7 @@
+Iniciando Scanner para archivo: inputs/input5.txt
+
+TOKEN(ERR, "S")
+Caracter invalido
+
+Scanner no exitoso
+

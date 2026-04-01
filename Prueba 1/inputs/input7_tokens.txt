@@ -1,0 +1,12 @@
+Iniciando Scanner para archivo: inputs/input7.txt
+
+TOKEN(MINOR, "1")
+TOKEN(NUM, "0101101")
+TOKEN(EQUAL, "!=")
+TOKEN(MINOR, "1")
+TOKEN(NUM, "11
+")
+TOKEN(END)
+
+Scanner exitoso
+

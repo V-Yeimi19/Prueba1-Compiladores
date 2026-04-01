@@ -6,23 +6,30 @@
 
 using namespace std;
 
-class Token {
+class Token
+{
 public:
     // Tipos de token
-    enum Type {
-        PLUS,    // +
-        MINUS,   // -
-        MUL,     // *
-        DIV,     // /
-        POW,     // ^
-        LPAREN,  // (
-        RPAREN,  // )
-        NUM,     // Número
-        SIN,     // sin
-        COS,     // cos
-        LOG,     // log
-        ERR,     // Error
-        END      // Fin de entrada
+    enum Type
+    {
+        PLUS,   // +
+        MINUS,  // -
+        MUL,    // *
+        DIV,    // /
+        POW,    // ^
+        LPAREN, // (
+        RPAREN, // )
+        MINOR,  // <
+        MAYOR,  // >
+        EQUAL,  // ==
+        DIF,    // !=
+        NUM,    // Número
+        ERR,    // Error
+        BIN,    // Binary
+        SIN,    // sin
+        COS,    // cos
+        LOG,    // log
+        END     // Fin de entradaso
     };
 
     // Atributos
@@ -32,11 +39,11 @@ public:
     // Constructores
     Token(Type type);
     Token(Type type, char c);
-    Token(Type type, const string& source, int first, int last);
+    Token(Type type, const string &source, int first, int last);
 
     // Sobrecarga de operadores de salida
-    friend ostream& operator<<(ostream& outs, const Token& tok);
-    friend ostream& operator<<(ostream& outs, const Token* tok);
+    friend ostream &operator<<(ostream &outs, const Token &tok);
+    friend ostream &operator<<(ostream &outs, const Token *tok);
 };
 
 #endif // TOKEN_H

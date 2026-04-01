@@ -1,7 +1,12 @@
 Iniciando Scanner para archivo: inputs/input10.txt
 
-TOKEN(ERR, "S")
-Caracter invalido
+TOKEN(SIN, "SIN")
+TOKEN(LPAREN, "")
+TOKEN(NUM, "90")
+TOKEN(RPAREN, "")
+TOKEN(MAYOR, ">")
+TOKEN(BIN, "0b1")
+TOKEN(END)
 
-Scanner no exitoso
+Scanner exitoso
 

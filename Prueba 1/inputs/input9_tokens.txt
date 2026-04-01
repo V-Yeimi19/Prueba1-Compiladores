@@ -8,7 +8,12 @@ TOKEN(RPAREN, "")
 TOKEN(MINOR, "<")
 TOKEN(NUM, "5")
 TOKEN(PLUS, "+")
-TOKEN(ERR, "C")
+TOKEN(COS, "COS")
+TOKEN(LPAREN, "")
+TOKEN(NUM, "15")
+TOKEN(RPAREN, "")
+TOKEN(ERR, "
+")
 Caracter invalido
 
 Scanner no exitoso

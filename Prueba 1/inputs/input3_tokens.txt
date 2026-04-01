@@ -1,6 +1,16 @@
 Iniciando Scanner para archivo: inputs/input3.txt
 
-TOKEN(ERR, "C")
+TOKEN(COS, "COS")
+TOKEN(LPAREN, "")
+TOKEN(NUM, "0")
+TOKEN(RPAREN, "")
+TOKEN(MUL, "*")
+TOKEN(LOG, "LOG")
+TOKEN(LPAREN, "")
+TOKEN(NUM, "100")
+TOKEN(RPAREN, "")
+TOKEN(ERR, "
+")
 Caracter invalido
 
 Scanner no exitoso

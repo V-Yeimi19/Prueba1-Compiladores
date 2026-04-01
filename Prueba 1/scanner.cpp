@@ -74,6 +74,8 @@ Token *Scanner::nextToken()
                     state = 10;
                 else
                     state = 8;
+            else if (isalpha(c))
+                state = 30;
             else
                 return new Token(Token::ERR, c);
             break;
@@ -112,7 +114,7 @@ Token *Scanner::nextToken()
             else if (isdigit(c))
                 state = 8;
             else
-                return new Token(Token::ERR, c);
+                state = 9;
             break;
 
         case 11:
@@ -124,6 +126,7 @@ Token *Scanner::nextToken()
                 rollBack();
                 return new Token(Token::BIN, input, first, current - first);
             }
+            break;
 
         case 12:
             return new Token(Token::MINOR, c);

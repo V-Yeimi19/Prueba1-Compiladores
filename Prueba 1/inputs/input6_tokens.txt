@@ -1,6 +1,6 @@
 Iniciando Scanner para archivo: inputs/input6.txt
 
-TOKEN(ERR, "T")
+TOKEN(ERR, "True")
 Caracter invalido
 
 Scanner no exitoso

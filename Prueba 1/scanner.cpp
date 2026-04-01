@@ -81,9 +81,9 @@ Token *Scanner::nextToken()
             break;
 
         case 1:
-            return new Token(Token::LPAREN);
+            return new Token(Token::LPAREN, c);
         case 2:
-            return new Token(Token::RPAREN);
+            return new Token(Token::RPAREN, c);
         case 3:
             return new Token(Token::PLUS, c);
         case 4:
